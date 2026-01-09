@@ -1,0 +1,38 @@
+<mat-card>
+ @if (machineId$ | async; as id) {
+    @if (machine$(id) | async; as machine) {
+      <mat-card-title>{{machine.name}}</mat-card-title>
+    }
+    @else {
+      <mat-card-title>Loading...</mat-card-title>
+    }
+
+    <mat-card-content>
+    <dl>
+      <dt class="title">Current status:</dt>
+      <dd>
+        @if(status$(id) | async; as status) {
+          <app-machine-status [status]="status"></app-machine-status>
+        }
+      </dd>
+
+      <!-- update the real number of statuses between parenthesis -->
+      @if(count$(id) | async; as count) {
+        <dt class="title">Status history ({{count}}):</dt>
+      }
+
+      <!-- display all the status here -->
+      <dd>
+        @for(record of ((history$(id) | async)??[]); track record?.timestamp ) {
+          <div>
+          @if(record.status) {
+            <app-machine-status [status]="record.status"></app-machine-status>
+          }
+          {{record.timestamp | date:'medium'}}
+        </div>
+        }
+      </dd>
+    </dl>
+  </mat-card-content>
+  }
+</mat-card>

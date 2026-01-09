@@ -1705,6 +1705,27 @@
     "@napi-rs/nice-win32-ia32-msvc" "1.0.1"
     "@napi-rs/nice-win32-x64-msvc" "1.0.1"
 
+"@ngrx/effects@^21.0.1":
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-21.0.1.tgz#00d6a0fdfb5de2936c339e1289cc743b3ea5dace"
+  integrity sha512-hSdpToAiSYa5FJ/CAygQHpnCaF2S1HO7q/57ob3XvNTWmkofa0VqI/IIe4W57bojh2YOWCJ91SCn3kAjymaV3g==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store-devtools@^21.0.1":
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-21.0.1.tgz#fb5125927f7976b0e76f609671a2df25cc6a66e5"
+  integrity sha512-G9fO7CFwYUpz8+JZ9uny+lVJ7iv6PcFJDg+jae5CCrAUIiflnR8gbwD8exAd2AODpxPCpmnSojuLNpLDAcwGzQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^21.0.1":
+  version "21.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-21.0.1.tgz#86103f7080d7f69711657f827e7a5f67827034a2"
+  integrity sha512-2hGnw/c5o8nmKzyx7TrUUM7FXjE2zqjX0EF+wLbw9Oy/L+VdCmx+ZI1BFjuAR4B8PKEWHG2KSbOM13SMNkpZiA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@19.2.1":
   version "19.2.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-19.2.1.tgz#330515cc27595b64030bd6768ad09c05e215b639"

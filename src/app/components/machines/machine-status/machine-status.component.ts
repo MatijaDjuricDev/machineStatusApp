@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { MachineStatus } from '../../interfaces/machine.interface';
+import { MachineStatus } from '../../../interfaces/machine.interface';
 
 @Component({
   selector: 'app-machine-status',

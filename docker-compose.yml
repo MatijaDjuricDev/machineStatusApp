@@ -1,0 +1,7 @@
+services:
+  backend:
+    image: cloudncfrontend/frontend-interview-backend
+    container_name: cloudnc-backend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

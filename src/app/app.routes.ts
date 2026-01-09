@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { MachineComponent } from './machines/machine/machine.component';
-import { MachinesComponent } from './machines/machines.component';
-import { SandboxComponent } from './sandbox/sandbox.component';
+import { MachineComponent } from './components/machines/machine/machine.component';
+import { MachinesComponent } from './components/machines/machines.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 export const routes: Routes = [
   // 'machines/:id' is not defined as a children of 'machines' on purpose

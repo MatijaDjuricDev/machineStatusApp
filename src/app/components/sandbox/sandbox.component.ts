@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Socket } from 'ngx-socket-io';
 import { Observable, scan, Subject } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Machine, MachineStatusFromWebSocket } from '../interfaces/machine.interface';
+import { Machine, MachineStatusFromWebSocket } from '../../interfaces/machine.interface';
 
 @Component({
   selector: 'app-sandbox',

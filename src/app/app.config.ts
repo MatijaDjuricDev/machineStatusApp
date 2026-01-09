@@ -3,6 +3,11 @@ import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } fr
 import { provideRouter } from '@angular/router';
 import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 import { routes } from './app.routes';
+import { provideState, provideStore } from '@ngrx/store';
+import { provideEffects } from '@ngrx/effects';
+import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { machinesReducer } from './state/machines.reducer';
+import { MachinesEffects } from './state/machines.effects';
 
 const socketIoConfig: SocketIoConfig = {
   url: 'http://localhost:3000',
@@ -17,5 +22,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     importProvidersFrom(SocketIoModule.forRoot(socketIoConfig)),
+    provideStore({}),
+    provideEffects([MachinesEffects]),
+    provideState('machines',machinesReducer),
+    provideStoreDevtools({maxAge: 25}),
   ],
 };
