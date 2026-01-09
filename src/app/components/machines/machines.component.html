@@ -9,7 +9,9 @@
     <mat-list-item>
     @if (machine) {
       <a mat-stroked-button [routerLink]="[machine.id]" [matBadge]="(count$(machine.id)|async)??0" matBadgeColor="accent">{{ machine.name }}</a>
-      <app-machine-status [status]="(status$(machine.id)|async)??MachineStatus.OFF"></app-machine-status>
+      @if(status$(machine.id) | async; as status) {
+        <app-machine-status [status]="status"></app-machine-status>
+      }
     }
     </mat-list-item>
   }

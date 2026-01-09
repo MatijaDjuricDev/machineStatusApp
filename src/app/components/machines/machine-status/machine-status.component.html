@@ -1,1 +1,16 @@
-<span class="machine-status">{{ status() | uppercase }}</span>
+
+    @if(status()===MachineStatus.OFF) {
+        <span class="machine-status" style="color: red;">
+            {{ status() | uppercase }}
+        </span>
+        
+    }
+
+    @else if(status()===MachineStatus.ON) {
+        <span class="machine-status" style="color: green;">
+        {{ status() | uppercase }}
+        </span>
+        
+    }
+    
+

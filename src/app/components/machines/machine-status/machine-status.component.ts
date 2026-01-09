@@ -11,5 +11,6 @@ import { MachineStatus } from '../../../interfaces/machine.interface';
   imports: [CommonModule],
 })
 export class MachineStatusComponent {
+  public MachineStatus = MachineStatus;
   public status = input.required<MachineStatus>();
 }
